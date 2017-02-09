@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="<%= theme %> <%= platform %>">
+<head>
+  <title><%= title %></title>
+  <!--// dns prefetch -->
+  <link rel="dns-prefetch" href="//p0.meituan.net"  />
+  <link rel="dns-prefetch" href="//p1.meituan.net"  />
+  <link rel="dns-prefetch" href="//ms0.meituan.net" />
+  <link rel="dns-prefetch" href="//ms1.meituan.net" />
+  <!--// meta section -->
+  <meta charset="utf-8">
+  <meta http-equiv="cleartype" content="yes" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <meta name="theme" content="<%= theme || 'default' %>" />
+  <meta name="csrf" content="<%= csrf.token %>" />
+  <meta name="timestamp" content="<%= csrf.timestamp %>" />
+  <meta name="referrer" content="<%= referrermeta %>" />
+  <!--// config -->
+  <meta name="description" content="<%= description %>" />
+  <meta name="keywords" content="<%= keywords.join(',') %>" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="format-detection" content="email=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <!--// apple webapp -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <!--// viewport -->
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  
+  <!--// favicon -->
+  <link rel="shortcut icon" href="<%= host.assets %>/img/favicon.ico" >
+  <!--// apple touch icon -->
+  <link rel="apple-touch-icon" href="<%= host.assets %>/img/touch-icon-iphone.png" />
+  <link rel="apple-touch-icon" href="<%= host.assets %>/img/touch-icon-iphone-retina.png" sizes="120x120" />
+  <link rel="apple-touch-startup-image" href="<%= host.assets %>/img/startup5.png" media="(device-height:568px)">
+  <link rel="apple-touch-startup-image" href="<%= host.assets %>/img/startup.png" media="(device-height:480px)" size="640x920" >
+  <% stylesheets.forEach(function(style){ %>
+  <!--// stylesheet <%= style %> -->
+  <link rel="stylesheet" href="<%= host.assets %><%= style %>" >
+  <% }) %>
+
+</head>
+<body style="<%= style %>" >
+  <div id="app" class="<%= 'page-' + pageName %>" ><%= body %></div>
+  <script>var AppData = <%= appData %>;</script>
+</body>
+<% javascripts.forEach(function(script){ %>
+<script type="text/javascript" src="<%= host.assets %><%= script %>" defer ></script>
+<% }) %>
+
+</html>

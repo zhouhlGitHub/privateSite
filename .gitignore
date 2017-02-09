@@ -1,0 +1,8 @@
+.DS_*
+*.log
+node_modules
+bower_componets
+logs
+*.sublime*
+*.idea
+public
