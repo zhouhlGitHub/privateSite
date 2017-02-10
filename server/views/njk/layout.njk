@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8"/>
+      {#-- DNS预处理 #}
+      <link href="//p0.meituan.net" rel="dns-prefetch">
+      <link href="//p1.meituan.net" rel="dns-prefetch">
+      <link href="//mc.meituan.net" rel="dns-prefetch">
+      <title>{{pageConfig.title | default('云淡风轻')}}</title>
+      <meta name="description" content='{{pageConfig.description  | default("云淡风轻天天想着以萌")}}'>
+      <meta name="keywords" content='{{pageConfig.keywords | default("以萌天天想着云淡风轻")}}'>
+      <meta name="applicable-device" content="mobile">
+      {% if not pageConfig.disableCSP %}
+          <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data:;">
+      {% endif %}
+      {% for styleitem in stylesheets %}
+        <link rel="stylesheet" href="{{host.assets}}{{styleitem}}" />
+      {% endfor %}
+    </head>
+  <body body-id='{{pageConfig.id | default("")}}' class="{{pageConfig.bodyClass | default('')}}" data-isWebview='{{GLOBAL.isWebview | default("false")}}'>
+    {% if not pageConfig.hideHeader %}
+      {% include "./common/header.njk" %}
+    {% endif %}
+
+    <div class="body-wrapper" id="bodyWrapper">
+      {% block body %}
+        this is body
+      {% endblock %}
+    </div>
+    {% if not pageConfig.hideFooter %}
+      {% include "./common/footer.njk" %}
+    {% endif %}
+
+    {% for script in javascripts %}
+      <script type="text/javascript" src="{{host.assets}}{{script}}" charset="utf-8" defer async></script>
+    {% endfor %}
+  </body>
+</html>

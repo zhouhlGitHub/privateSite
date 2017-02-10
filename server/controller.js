@@ -4,8 +4,11 @@ import config from 'config';
 import request from 'superagent';
 import qs from 'querystring';
 import stream from 'stream';
-import render from './middlewares/render';
-
+import logger from 'winston';
+import PrettyError from 'pretty-error';
+// import render from './middlewares/render';
+import render from './middlewares/nunjucks';
+let pe = new PrettyError();
 export default class Controller {
   send(body) {
     this.ctx.body = body;
@@ -17,8 +20,7 @@ export default class Controller {
    * @param {[type]}        [this]
    */
    render(view, locals) {
-     let { ctx } = this;
-     render.apply(ctx, arguments);
+     render.apply(this, arguments);
     //  let ws = stream.PassThrough();
     //  let self = this;
     //  this.ctx.body = ws;
@@ -41,5 +43,6 @@ export default class Controller {
     if(!(e instanceof Error)){
       e = new Error(e);
     }
+    logger.error(pe.render(e));
   }
 }

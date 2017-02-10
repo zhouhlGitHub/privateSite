@@ -21,7 +21,7 @@ var config = {
   module: {
     loaders: [
       {
-        test: /\.css$/,
+        test: /\.less$/,
         loader: ExtractTextPlugin.extract('style-loader!css-loader')
       },
       {
