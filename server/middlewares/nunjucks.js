@@ -31,7 +31,7 @@ export default function render(tpl, locals = {}) {
     script += '.js';
     return `/js/${hash[script] || script}`;
   });
-  data.stylesheets = ['common', `${tpl}/index`].map(style => {
+  data.stylesheets = ['vendors', `${tpl}/index`].map(style => {
     style += '.css';
     return `/css/${hash[style] || style}`;
   });

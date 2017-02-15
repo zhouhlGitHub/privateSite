@@ -26,12 +26,12 @@ var config = {
     }
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.scss$/,
-        loader: 'sass-loader'
-      }
-    ],
+    // preLoaders: [
+    //   {
+    //     test: /\.scss$/,
+    //     loader: 'sass-loader'
+    //   }
+    // ],
     loaders: [
       {
         test: /\.vue$/,
@@ -43,7 +43,7 @@ var config = {
         loader: 'babel',
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', '!css-loader!postcss-loader')
       }
     ]
@@ -51,10 +51,10 @@ var config = {
   postcss: [
     // require('precss'),
     // require('postcss-import'),
-    // require('postcss-mixins'),
-    // require('postcss-nested'),
-    // require('postcss-custom-properties')(),
-    // require('postcss-math'),
+    require('postcss-mixins'),
+    require('postcss-nested'),
+    require('postcss-custom-properties')(),
+    require('postcss-math'),
     require('autoprefixer')
   ],
   plugins: [

@@ -1,9 +1,0 @@
-.clear{
-  zoom: 1;
-  &::after{
-    display:table;
-    clear: both;
-    overflow: hidden;
-    height: 0;
-  }
-}

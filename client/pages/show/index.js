@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import style from './index.scss';
+import style from './index.css';
 _.each([4,5,6], function(item, index) {
   console.log(item, index);
 });

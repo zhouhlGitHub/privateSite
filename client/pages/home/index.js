@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import Vue from 'vue';
 import Favlist from '../../components/Favlist';
-import style from './index.scss';
+import style from './index.css';
 // if (module.hot) {
 //   module.hot.accept()
 // }

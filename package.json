@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0;./node_modules/.bin/gulp",
     "start": "rm -rf ./public; node ./index.js",
-    "build": "rm -rf ./public; NODE_ENV=production node_modules/.bin/webpack --config webpack.config.prod.babel.js"
+    "build": "rm -rf ./public; node_modules/.bin/webpack --config webpack.config.prod.babel.js;NODE_ENV=production node index.js"
   },
   "repository": {
     "type": "git",
