@@ -1,0 +1,13 @@
+@import "../../common/css/reset.scss";
+@import "../../common/css/common.scss";
+body{
+  background: red;
+}
+.body-wrapper{
+  background: #fff;
+  border: 1px solid red;
+  display: flex;
+  & .aaaa{
+    font-size: 12px;
+  }
+}

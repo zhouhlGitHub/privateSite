@@ -26,7 +26,7 @@ export default function render(tpl, locals = {}) {
   data.description     = locals.$description  || config.description;
   data.referrermeta    = locals.$referrermeta || 'default'         ;
 
-  let hash = require(path.join(config.path.public, 'hash.json'));
+  let hash = require(config.path.hash);
   data.javascripts = ['vendors', `${tpl}/index`].map((script) => {
     script += '.js';
     return `/js/${hash[script] || script}`;
