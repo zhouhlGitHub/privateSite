@@ -1,15 +1,18 @@
 {% set pageConfig = {
     id: 00001,
     bodyClass: "home-index",
-    title: "北山－首页"
+    title: "北山"
   }
 %}
 {% extends "../layout.njk" %}
+
 {% block body %}
-  <div class="header-tips">
-    <h2>北山首页</h2>
-    <div class="vue-cst-wrapper">
-      <favlist></favlist>
-    </div>
-  </div>
+  <section class="content">
+    <ul class="c-main-lists">
+      <li class="c-main-list"><a href="/spring" class="list-link spring"><i class="link-icon"></i></a></li>
+      <li class="c-main-list"><a href="/summer" class="list-link summer"><i class="link-icon"></i></a></li>
+      <li class="c-main-list"><a href="/autumn" class="list-link autumn"><i class="link-icon"></i></a></li>
+      <li class="c-main-list"><a href="/winter" class="list-link winter"><i class="link-icon"></i></a></li>
+    </ul>
+  </section>
 {% endblock %}

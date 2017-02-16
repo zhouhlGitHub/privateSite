@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0;./node_modules/.bin/gulp",
-    "start": "rm -rf ./public; node ./index.js",
+    "start": "rm -rf ./public; gulp",
     "build": "rm -rf ./public; node_modules/.bin/webpack --config webpack.config.prod.babel.js;NODE_ENV=production node index.js"
   },
   "repository": {
@@ -47,6 +47,7 @@
     "del": "^2.2.2",
     "eventsource-polyfill": "^0.9.6",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.10.0",
     "glob": "^7.1.1",
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.2.1",
@@ -68,6 +69,7 @@
     "run-sequence": "^1.2.2",
     "sass-loader": "^6.0.0",
     "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "vue-html-loader": "^1.2.3",
     "vue-loader": "^10.3.0",
     "vue-style-loader": "^2.0.0",

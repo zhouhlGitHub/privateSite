@@ -16,7 +16,7 @@ if (process.env.CONFIG_ENV) {
   config = require('config');
 }
 
-requireDir('./client/tasks');
+// requireDir('./client/tasks');
 
 gulp.task('default', ['server', 'client']);
 gulp.task('client', function(cb) {

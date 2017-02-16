@@ -9,6 +9,7 @@
       <title>{{pageConfig.title | default('云淡风轻')}}</title>
       <meta name="description" content='{{pageConfig.description  | default("云淡风轻天天想着以萌")}}'>
       <meta name="keywords" content='{{pageConfig.keywords | default("以萌天天想着云淡风轻")}}'>
+      <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
       <meta name="applicable-device" content="mobile">
       {% if not pageConfig.disableCSP %}
           <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data:;">

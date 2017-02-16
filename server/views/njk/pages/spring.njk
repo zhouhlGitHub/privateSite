@@ -1,0 +1,12 @@
+{% set pageConfig = {
+    id: 00001,
+    bodyClass: "spring-index",
+    title: "春意盎然"
+  }
+%}
+{% extends "../layout.njk" %}
+
+{% block body %}
+  <canvas id="canvas" width="1440" height="466" style="cursor: move;">你的浏览器不支持HTML5画布技术，请使用谷歌浏览器。</canvas>
+  <div style="position: absolute; top: 20px; right: 20px;"></div>
+{% endblock %}

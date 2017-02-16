@@ -39,6 +39,10 @@ var config = {
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', '!css-loader!postcss-loader')
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limit=8192&name=images/[name].[ext]'
       }
     ]
   },

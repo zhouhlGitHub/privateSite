@@ -1,0 +1,18 @@
+{% set pageConfig = {
+    id: 00001,
+    bodyClass: "home-index",
+    title: "瑞雪寒冬"
+  }
+%}
+{% extends "../layout.njk" %}
+
+{% block body %}
+  <section class="content">
+    <ul class="c-main-lists">
+      <li class="c-main-list"><a href="#" class="list-link spring"><i class="link-icon"></i></a></li>
+      <li class="c-main-list"><a href="#" class="list-link summer"><i class="link-icon"></i></a></li>
+      <li class="c-main-list"><a href="#" class="list-link autumn"><i class="link-icon"></i></a></li>
+      <li class="c-main-list"><a href="#" class="list-link winter"><i class="link-icon"></i></a></li>
+    </ul>
+  </section>
+{% endblock %}

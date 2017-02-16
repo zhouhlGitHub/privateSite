@@ -1,13 +1,51 @@
 @import "../../common/css/reset.css";
 @import "../../common/css/common.css";
-body{
-  background: red;
-}
 .body-wrapper{
-  background: #fff;
-  border: 1px solid red;
-  display: flex;
-  & .aaaa{
-    font-size: 12px;
-  }
+  width: 80%;
+  margin: 20% auto 0;
+  min-height: 200px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 20px;
+  box-shadow: 0 0 30px #f10606;
+}
+.c-main-lists{
+  overflow: hidden;
+  padding: 40px 10px;
+}
+.c-main-list{
+  float: left;
+  width: 20%;
+  position: relative;
+  margin-left: 4%;
+}
+.c-main-list .list-link{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 55.76%;
+}
+.list-link .link-icon{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 0 18px #06f720;
+}
+.spring .link-icon{
+  background-image: url('../../images/pages/springThum.jpg');
+}
+.summer .link-icon{
+  background-image: url('../../images/pages/summerThum.jpg');
+}
+.autumn .link-icon{
+  background-image: url('../../images/pages/autumnThum.jpg');
+}
+.winter .link-icon{
+  background-image: url('../../images/pages/winterThum.jpg');
 }

@@ -1,3 +1,13 @@
+html,body{
+  height: 100%;
+}
+html{
+  overflow-x: hidden;
+}
+body{
+  background: url("../../images/common/bg-1.jpg") no-repeat;
+  background-size: 100% 100%;
+}
 .clear{
   zoom: 1;
 }
@@ -6,4 +16,33 @@
   clear: both;
   overflow: hidden;
   height: 0;
+}
+.header{
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 11;
+}
+header.header .navigation{
+  width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.header ul{
+  /*overflow: hidden;*/
+  float: right;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.header li{
+  float: left;
+  padding: 10px 40px;
+  margin-right: 20px;
+}
+.header li a{
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 22px;
+}
+.header li a:hover{
+  color: #fff;
 }
