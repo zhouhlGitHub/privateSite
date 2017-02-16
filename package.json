@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0;./node_modules/.bin/gulp",
     "start": "rm -rf ./public; gulp",
-    "build": "rm -rf ./public; node_modules/.bin/webpack --config webpack.config.prod.babel.js;NODE_ENV=production node index.js"
+    "build": "rm -rf ./public; node_modules/.bin/webpack --config webpack.config.prod.babel.js;NODE_ENV=production node_modules/.bin/pm2 start index.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "lodash": "^4.17.2",
     "nunjucks": "^3.0.0",
     "nunjucks-loader": "^2.4.5",
+    "pm2": "^2.4.0",
     "pretty-error": "^2.0.2",
     "querystring": "^0.2.0",
     "react": "^15.4.1",
