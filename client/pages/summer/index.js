@@ -1,35 +1,35 @@
 import style from './index.css';
 import imagesInit from '../../common/js/imagesInit.js';
-import img2 from '../../images/pages/spring/spring_002.jpg';
-import img3 from '../../images/pages/spring/spring_003.jpg';
-import img4 from '../../images/pages/spring/spring_004.jpg';
-import img5 from '../../images/pages/spring/spring_005.jpg';
-import img6 from '../../images/pages/spring/spring_006.jpg';
-import img7 from '../../images/pages/spring/spring_007.jpg';
-import img8 from '../../images/pages/spring/spring_008.jpg';
-import img9 from '../../images/pages/spring/spring_009.jpg';
-import img10 from '../../images/pages/spring/spring_010.jpg';
-import img11 from '../../images/pages/spring/spring_011.jpg';
-import img12 from '../../images/pages/spring/spring_012.jpg';
-import img13 from '../../images/pages/spring/spring_013.jpg';
+import img1 from '../../images/pages/summer/summer_001.jpg';
+import img2 from '../../images/pages/summer/summer_002.jpg';
+import img3 from '../../images/pages/summer/summer_003.jpg';
+import img4 from '../../images/pages/summer/summer_004.jpg';
+import img5 from '../../images/pages/summer/summer_005.jpg';
+import img6 from '../../images/pages/summer/summer_006.jpg';
+import img7 from '../../images/pages/summer/summer_007.jpg';
+import img8 from '../../images/pages/summer/summer_008.jpg';
+import img9 from '../../images/pages/summer/summer_009.jpg';
+import img10 from '../../images/pages/summer/summer_010.jpg';
+import img11 from '../../images/pages/summer/summer_011.jpg';
+import img12 from '../../images/pages/summer/summer_012.jpg';
 imagesInit.load({
 	imgdata:[
 		// north
-		{img:'images/spring_002.jpg', x:-1000, y:0, z:1500, nx:0, nz:1},
-		{img:'images/spring_003.jpg', x:0,     y:0, z:1500, nx:0, nz:1},
-		{img:'images/spring_004.jpg', x:1000,  y:0, z:1500, nx:0, nz:1},
+		{img:'images/summer_002.jpg', x:-1000, y:0, z:1500, nx:0, nz:1},
+		{img:'images/summer_003.jpg', x:0,     y:0, z:1500, nx:0, nz:1},
+		{img:'images/summer_004.jpg', x:1000,  y:0, z:1500, nx:0, nz:1},
 		// east
-		{img:'images/spring_005.jpg', x:1500,  y:0, z:1000, nx:-1, nz:0},
-		{img:'images/spring_006.jpg', x:1500,  y:0, z:0, nx:-1, nz:0},
-		{img:'images/spring_007.jpg', x:1500,  y:0, z:-1000, nx:-1, nz:0},
+		{img:'images/summer_005.jpg', x:1500,  y:0, z:1000, nx:-1, nz:0},
+		{img:'images/summer_006.jpg', x:1500,  y:0, z:0, nx:-1, nz:0},
+		{img:'images/summer_007.jpg', x:1500,  y:0, z:-1000, nx:-1, nz:0},
 		// south
-		{img:'images/spring_008.jpg', x:1000,  y:0, z:-1500, nx:0, nz:-1},
-		{img:'images/spring_009.jpg', x:0,     y:0, z:-1500, nx:0, nz:-1},
-		{img:'images/spring_010.jpg', x:-1000, y:0, z:-1500, nx:0, nz:-1},
+		{img:'images/summer_008.jpg', x:1000,  y:0, z:-1500, nx:0, nz:-1},
+		{img:'images/summer_009.jpg', x:0,     y:0, z:-1500, nx:0, nz:-1},
+		{img:'images/summer_010.jpg', x:-1000, y:0, z:-1500, nx:0, nz:-1},
 		// west
-		{img:'images/spring_011.jpg', x:-1500, y:0, z:-1000, nx:1, nz:0},
-		{img:'images/spring_012.jpg', x:-1500, y:0, z:0, nx:1, nz:0},
-		{img:'images/spring_013.jpg', x:-1500, y:0, z:1000, nx:1, nz:0}
+		{img:'images/summer_011.jpg', x:-1500, y:0, z:-1000, nx:1, nz:0},
+		{img:'images/summer_012.jpg', x:-1500, y:0, z:0, nx:1, nz:0},
+		{img:'images/summer_001.jpg', x:-1500, y:0, z:1000, nx:1, nz:0}
 	],
 	structure:[
 		{

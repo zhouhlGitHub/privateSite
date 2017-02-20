@@ -46,3 +46,15 @@ header.header .navigation{
 .header li a:hover{
   color: #fff;
 }
+.header .header-left{
+  float: left;
+}
+.header-left li{
+  padding: 10px;
+  margin-right: 0;
+  margin-left: 10px;
+}
+.header-left li a{
+  font-size: 14px;
+  color: #ccc;
+}
