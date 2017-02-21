@@ -1,0 +1,50 @@
+{% set pageConfig = {
+    id: 00007,
+    bodyClass: "poem-index",
+    title: "中华古诗词"
+  }
+%}
+{% extends "../layout.njk" %}
+{% set imageList = ['00','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16'] %}
+{% block body %}
+<div id="pxs_container" class="pxs_container">
+      <div class="pxs_bg">
+          <div class="pxs_bg1"></div>
+          <div class="pxs_bg2"></div>
+          <div class="pxs_bg3"></div>
+      </div>
+      <div class="pxs_loading" style="display: none;">Loading images...</div>
+      <div class="pxs_slider_wrapper" style="display: block;">
+          <ul class="pxs_slider" style="width: 27075px;">
+            {% for i in imageList %}
+              <li style="width: 1425px;"><img src="images/poem_00{{i}}.jpg" alt="First Image"></li>
+            {% endfor %}
+          </ul>
+          <div class="pxs_navigation">
+              <span class="pxs_next" style="left: 951.5px;"></span>
+              <span class="pxs_prev" style="left: 444.5px;"></span>
+          </div>
+          <ul class="pxs_thumbnails" style="display: none; width: 566px; margin-left: -283px;">
+            <li style="left: 0px; transform: rotate(13.9971deg);"><img src="images/1.jpg" alt="First Image"></li>
+                <li style="left: 0px; transform: rotate(-19.8493deg);"><img src="images/2.jpg" alt="Second Image"></li>
+                <li style="left: 0px; transform: rotate(16.1607deg);"><img src="images/3.jpg" alt="Third Image"></li>
+                <li style="left: 0px; transform: rotate(13.4318deg);"><img src="images/4.jpg" alt="Forth Image"></li>
+                <li style="left: 0px; transform: rotate(3.56504deg);"><img src="images/5.jpg" alt="Fifth Image"></li>
+                <li style="left: 0px; transform: rotate(3.20767deg);"><img src="images/6.jpg" alt="Sixth Image"></li>
+				        <li style="left: 0px; transform: rotate(1.36526deg);"><img src="images/7.jpg" alt="First Image"></li>
+                <li style="left: 0px; transform: rotate(-0.617211deg);"><img src="images/8.jpg" alt="Second Image"></li>
+                <li style="left: 0px; transform: rotate(-16.3504deg);"><img src="images/9.jpg" alt="Third Image"></li>
+                <li style="left: 0px; transform: rotate(-13.28deg);"><img src="images/10.jpg" alt="Forth Image"></li>
+                <li style="left: 0px; transform: rotate(-4.21589deg);"><img src="images/11.jpg" alt="Fifth Image"></li>
+                <li style="left: 0px; transform: rotate(-9.66604deg);"><img src="images/12.jpg" alt="Sixth Image"></li>
+				        <li style="left: 0px; transform: rotate(13.1754deg);"><img src="images/13.jpg" alt="Fifth Image"></li>
+                <li style="left: 0px; transform: rotate(-16.8197deg);"><img src="images/14.jpg" alt="Sixth Image"></li>
+				        <li style="left: 0px; transform: rotate(18.6498deg);"><img src="images/15.jpg" alt="First Image"></li>
+                <li style="left: 0px; transform: rotate(-19.6025deg);"><img src="images/16.jpg" alt="Second Image"></li>
+                <li style="left: 0px; transform: rotate(7.88934deg);"><img src="images/17.jpg" alt="Third Image"></li>
+                <li style="left: 0px; transform: rotate(5.85324deg);"><img src="images/18.jpg" alt="Forth Image"></li>
+                <li style="left: 0px; transform: rotate(17.3994deg);"><img src="images/19.jpg" alt="Fifth Image"></li>
+          </ul>
+      </div>
+  </div>
+{% endblock %}
