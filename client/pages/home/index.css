@@ -18,12 +18,14 @@
   position: relative;
   margin-left: 4%;
 }
-.c-main-list .list-link{
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-top: 55.76%;
+.c-main-list {
+  .list-link{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 55.76%;
+  }
 }
 .list-link .link-icon{
   display: block;

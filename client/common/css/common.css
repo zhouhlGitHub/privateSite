@@ -10,12 +10,12 @@ body{
 }
 .clear{
   zoom: 1;
-}
-.clear:after{
-  display:table;
-  clear: both;
-  overflow: hidden;
-  height: 0;
+  &:after{
+    display:table;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+  }
 }
 .header{
   width: 100%;

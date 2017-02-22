@@ -54,7 +54,7 @@ var config = {
   },
   postcss: [
     // require('precss'),
-    // require('postcss-import'),
+    require('postcss-import'),
     require('postcss-mixins'),
     require('postcss-nested'),
     require('postcss-custom-properties')(),

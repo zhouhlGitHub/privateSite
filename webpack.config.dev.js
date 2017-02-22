@@ -42,11 +42,16 @@ var config = {
       },
       {
         test: /\.(png|jpg)$/,
-        loader: 'url-loader?limit=8192&name=images/[name].[ext]'
+        loader: 'url-loader?limit=10000&name=images/[name].[ext]'
       }
     ]
   },
   postcss: [
+    require('postcss-import'),
+    require('postcss-mixins'),
+    require('postcss-nested'),
+    require('postcss-custom-properties')(),
+    require('postcss-math'),
     require('autoprefixer')
   ],
   plugins: [
