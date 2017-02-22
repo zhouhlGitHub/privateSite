@@ -70,7 +70,7 @@ var config = {
       minChunks: chunks.length
     }),
     // new webpack.optimize.CommonsChunkPlugin("commons", "commons.js"),
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.optimize.UglifyJsPlugin(),
   ],
 
 };
