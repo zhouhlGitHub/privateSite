@@ -7,7 +7,8 @@ import browser from './middlewares/browser';
 const app = koa();
 app.use(browser(app, config));
 app.use(staticServer(config.path.public,{
-  hidden: true
+  hidden: true,
+  maxage: 60*1000
 }));
 app.use(router(app, config.router));
 
