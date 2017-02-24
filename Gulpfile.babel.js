@@ -18,7 +18,13 @@ if (process.env.CONFIG_ENV) {
 
 // requireDir('./client/tasks');
 
-gulp.task('default', ['server', 'client']);
+gulp.task('default', ['server', 'copy']);
+gulp.task('copy', function(cb) {
+  gulp.src('client/images/**/*')
+      .pipe(gulp.dest('public/images/'))
+  //runSequence('clean');
+  cb();
+});
 gulp.task('client', function(cb) {
   console.log('debug: ' + config.debug);
   //runSequence('clean');
