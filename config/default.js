@@ -12,6 +12,10 @@ export default Object.assign(require('../package.json'), {
 	   routes: './server/routes/',
 	   controllers: './server/controllers/'
 	},
+	loginUrls: [
+		/^\/user/,
+		/^\/article/
+	],
 	host: {
 		assets: ''
 	},
