@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0;./node_modules/.bin/gulp",
-    "start": "rm -rf ./public; gulp",
-    "build": "rm -rf ./public; node_modules/.bin/webpack --config webpack.config.prod.babel.js;gulp copy;NODE_ENV=production node_modules/.bin/pm2 start index.js"
+    "start": "rm -rf ./public; yarn install; gulp",
+    "build": "rm -rf ./public; node_modules/.bin/pm2 stop 0; yarn install; node_modules/.bin/webpack --config webpack.config.prod.babel.js;gulp copy;NODE_ENV=production node_modules/.bin/pm2 start index.js"
   },
   "repository": {
     "type": "git",

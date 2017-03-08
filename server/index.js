@@ -14,7 +14,7 @@ app.use(staticServer(config.path.public,{
   maxage: 60*1000
 }));
 let url = app.path;
-if (Arrary.isArray(config.loginUrls)) {
+if (Array.isArray(config.loginUrls)) {
   if (config.loginUrls.find(loginUrl => loginUrl.test(url))) {
     app.use(Auth());
   }
