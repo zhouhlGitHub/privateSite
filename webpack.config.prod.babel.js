@@ -4,6 +4,7 @@ var webpack = require('webpack');
 var config = require('config');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var AssetsPlugin = require('assets-webpack-plugin');
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 
@@ -15,7 +16,7 @@ var config = {
   entry: entries,
   output: {
     path: config.path.public,
-    filename: 'js/[name].js',
+    filename: 'js/[name]-[chunkhash:8].js',
     publicPath: '/'
   },
   devtool: 'source-map',
@@ -63,7 +64,7 @@ var config = {
   ],
   plugins: [
     new webpack.BannerPlugin("copyright zhouhuilin private!"),
-    new ExtractTextPlugin("css/[name].css"),
+    new ExtractTextPlugin("css/[name]-[chunkhash:8].css"),
     new CommonsChunkPlugin({
       name: 'vendors',
       chunks: chunks,
@@ -71,6 +72,7 @@ var config = {
     }),
     // new webpack.optimize.CommonsChunkPlugin("commons", "commons.js"),
     new webpack.optimize.UglifyJsPlugin(),
+    new AssetsPlugin({filename: 'assets_hash.json'}),
   ],
 
 };

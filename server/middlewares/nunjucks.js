@@ -28,12 +28,20 @@ export default function render(tpl, locals = {}) {
 
   let hash = require(config.path.hash);
   data.javascripts = ['vendors', `${tpl}/index`].map((script) => {
-    script += '.js';
-    return `/js/${hash[script] || script}`;
+    console.log(script, '\n');
+    console.log(hash);
+    return hash[script]['js'];
+    if (hash[script] && hash[script]['js']) {
+    } else {
+      return `/js/${script}.js`;
+    }
   });
   data.stylesheets = [`${tpl}/index`].map(style => {
-    style += '.css';
-    return `/css/${hash[style] || style}`;
+    if (hash[style] && hash[style]['css']) {
+      return hash[style]['css'];
+    } else {
+      return `/css/${style}.css`;
+    }
   });
 
   let self = this;

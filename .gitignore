@@ -6,3 +6,5 @@ logs
 *.sublime*
 *.idea
 public
+assets_hash.json
+hash.json

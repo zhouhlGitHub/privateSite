@@ -18,7 +18,7 @@ var config = {
     filename: 'js/[name].js',
     publicPath: '/'
   },
-  devtool: 'source-map',
+  devtool: 'eval',
   resolve: {
     extensions: ['', '.js', '.vue'],
     alias: {
