@@ -1,53 +1,44 @@
 {
-  "name": "privateSite",
-  "version": "0.0.1",
-  "description": "personal site",
+  "name": "privatesitevue",
+  "version": "1.0.1",
+  "description": "vue and webpack develop private site",
   "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "vue": "^2.2.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-runtime": "5",
+    "css-loader": "^0.27.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "vue-hot-reload-api": "^2.0.11",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^11.2.0",
+    "vue-style-loader": "^2.0.4",
+    "vue-template-compiler": "^2.2.4",
+    "webpack": "^2.3.0",
+    "webpack-dev-middleware": "^1.10.1",
+    "webpack-dev-server": "^2.4.2",
+    "webpack-hot-middleware": "^2.17.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "dev": "./node_modules/.bin/gulp"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --display-modules --display-chunks --config build/webpack.prod.config.js",
+    "dev": "node ./server/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com:zhouhlGitHub/privateSite.git"
+    "url": "git+https://github.com/zhouhlGitHub/privateSite.git"
   },
-  "author": "zhouhuilin",
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "babel-preset-react": "^6.16.0",
-    "babel-register": "^6.18.0",
-    "babel-cli": "^6.18.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "config": "^1.24.0",
-    "koa": "^1.2.4",
-    "koa-routeify": "^1.1.0",
-    "koa-static": "^2.0.0",
-    "lodash": "^4.17.2",
-    "nunjucks": "^3.0.0",
-    "nunjucks-loader": "^2.4.5",
-    "querystring": "^0.2.0",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "react-dom-stream": "^0.5.1",
-    "serialize-javascript": "^1.3.0",
-    "stream": "0.0.2",
-    "superagent": "^3.1.0"
+  "bugs": {
+    "url": "https://github.com/zhouhlGitHub/privateSite/issues"
   },
-  "devDependencies": {
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.9",
-    "del": "^2.2.2",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "glob": "^7.1.1",
-    "gulp": "^3.9.1",
-    "gulp-nodemon": "^2.2.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-util": "^3.0.7",
-    "html-webpack-plugin": "^2.24.1",
-    "require-dir": "^0.3.1",
-    "run-sequence": "^1.2.2",
-    "webpack": "^1.13.3"
-  }
+  "homepage": "https://github.com/zhouhlGitHub/privateSite#readme"
 }
